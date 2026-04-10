@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noah & Marcelo Performance Hub</title>
+    <meta
+      name="description"
+      content="Dashboard estático para acompanhar a evolução esportiva de Noah e Marcelo com gráficos, histórico e backup local."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-glow page-glow-left"></div>
+    <div class="page-glow page-glow-right"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#top">
+        <span class="brand-mark">NM</span>
+        <span class="brand-copy">
+          <strong>Noah & Marcelo</strong>
+          <small>Performance Hub</small>
+        </span>
+      </a>
+
+      <nav class="topnav">
+        <a href="#compare">Comparativo</a>
+        <a href="#athlete-noah">Noah</a>
+        <a href="#athlete-marcelo">Marcelo</a>
+        <a href="#registrar">Nova coleta</a>
+        <a href="#backup">Backup</a>
+        <a href="./guia.html">Como usar</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero panel" id="top">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Acompanhamento de futebol de base</span>
+          <h1>Um site único para medir evolução, comparar ciclos e guardar todo o histórico.</h1>
+          <p>
+            O painel já nasce com as coletas iniciais de Noah e Marcelo, calcula os indicadores do
+            RAST e do salto horizontal, gera leitura rápida do momento e salva tudo direto no
+            navegador.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#registrar">Cadastrar nova avaliação</a>
+            <a class="button button-secondary" href="#compare">Ver comparativo</a>
+            <a class="button button-ghost" href="./guia.html">Guia para leigos</a>
+          </div>
+        </div>
+
+        <div class="hero-grid reveal" id="heroGrid"></div>
+      </section>
+
+      <section class="panel reveal" id="compare">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Comparativo rápido</span>
+            <h2>Onde cada um está hoje</h2>
+          </div>
+          <p>
+            O resumo abaixo sempre usa a coleta mais recente de cada atleta para mostrar potência,
+            controle de fadiga e explosão de membros inferiores.
+          </p>
+        </div>
+
+        <div class="comparison-layout">
+          <article class="glass-card compare-summary" id="compareSummary"></article>
+          <article class="glass-card chart-card">
+            <div class="card-header">
+              <h3>Painel dos últimos dados</h3>
+              <span>Potência relativa média, fadiga e salto</span>
+            </div>
+            <canvas id="compareChart" aria-label="Gráfico comparativo dos atletas"></canvas>
+          </article>
+        </div>
+      </section>
+
+      <section id="athletes"></section>
+
+      <section class="panel form-section reveal" id="registrar">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Nova coleta</span>
+            <h2>Adicionar avaliação no front</h2>
+          </div>
+          <p>
+            Tudo salvo localmente no navegador. Ao finalizar, o site recalcula cards, gráficos,
+            tabelas e histórico.
+          </p>
+        </div>
+
+        <div class="form-layout">
+          <form class="glass-card eval-form" id="evaluationForm">
+            <div class="form-grid form-grid-2">
+              <label>
+                <span>Atleta</span>
+                <select name="athleteId" id="athleteId" required></select>
+              </label>
+
+              <label>
+                <span>Data da coleta</span>
+                <input type="date" name="date" required />
+              </label>
+
+              <label>
+                <span>Idade (anos)</span>
+                <input type="number" name="age" min="1" max="25" step="1" required />
+              </label>
+
+              <label>
+                <span>Peso (kg)</span>
+                <input type="number" name="weightKg" min="1" step="0.1" required />
+              </label>
+
+              <label>
+                <span>Altura (m)</span>
+                <input type="number" name="heightM" min="0.5" step="0.01" required />
+              </label>
+
+              <label>
+                <span>SLJ melhor salto (m)</span>
+                <input type="number" name="sljMeters" min="0.2" step="0.01" required />
+              </label>
+            </div>
+
+            <div class="sprint-block">
+              <div class="card-header">
+                <h3>RAST: 6 tiros de 35m</h3>
+                <span>Preencha os tempos em segundos.</span>
+              </div>
+
+              <div class="form-grid form-grid-3">
+                <label>
+                  <span>Tiro 1</span>
+                  <input type="number" name="sprint1" min="1" step="0.01" required />
+                </label>
+                <label>
+                  <span>Tiro 2</span>
+                  <input type="number" name="sprint2" min="1" step="0.01" required />
+                </label>
+                <label>
+                  <span>Tiro 3</span>
+                  <input type="number" name="sprint3" min="1" step="0.01" required />
+                </label>
+                <label>
+                  <span>Tiro 4</span>
+                  <input type="number" name="sprint4" min="1" step="0.01" required />
+                </label>
+                <label>
+                  <span>Tiro 5</span>
+                  <input type="number" name="sprint5" min="1" step="0.01" required />
+                </label>
+                <label>
+                  <span>Tiro 6</span>
+                  <input type="number" name="sprint6" min="1" step="0.01" required />
+                </label>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <label>
+                <span>Fotos do shape nesse dia</span>
+                <input type="file" id="shapePhotosInput" accept="image/*" multiple />
+              </label>
+
+              <label>
+                <span>Observações</span>
+                <textarea
+                  name="notes"
+                  rows="4"
+                  placeholder="Ex.: retorno de lesão, troca de chuteira, fadiga do treino, observações gerais..."
+                ></textarea>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Salvar coleta</button>
+              <button class="button button-ghost" type="reset">Limpar campos</button>
+            </div>
+          </form>
+
+          <aside class="glass-card side-panel">
+            <div class="card-header">
+              <h3>Prévia das fotos anexadas</h3>
+              <span>Essas imagens ficam ligadas à avaliação do dia.</span>
+            </div>
+
+            <div class="preview-grid" id="shapePreview">
+              <div class="empty-state">
+                <strong>Nenhuma foto selecionada</strong>
+                <span>Ao escolher as imagens, a prévia aparece aqui.</span>
+              </div>
+            </div>
+
+            <div class="side-tips">
+              <strong>Fluxo ideal</strong>
+              <p>
+                Cadastra a coleta, exporta um backup em JSON ou Excel e usa o botão de impressão
+                para gerar PDF do atleta quando quiser mandar para a família.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="panel backup-section reveal" id="backup">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Segurança dos dados</span>
+            <h2>Backup, restauração e reset</h2>
+          </div>
+          <p>
+            Como o site é 100% estático, os dados ficam no navegador. Aqui você exporta tudo para
+            fora e recupera quando precisar.
+          </p>
+        </div>
+
+        <div class="backup-actions">
+          <button class="glass-button" id="exportJsonBtn" type="button">Exportar JSON</button>
+          <button class="glass-button" id="exportExcelBtn" type="button">Exportar Excel</button>
+          <button class="glass-button" id="importJsonBtn" type="button">Importar backup</button>
+          <button class="glass-button danger" id="resetDataBtn" type="button">
+            Restaurar dados iniciais
+          </button>
+          <input type="file" id="importJsonInput" accept="application/json" hidden />
+        </div>
+
+        <div class="backup-note glass-card">
+          <h3>Como está funcionando</h3>
+          <p>
+            As fotos principais do Noah e do Marcelo ficam dentro do projeto. As fotos de shape de
+            cada avaliação são comprimidas antes de salvar para manter o site leve e portátil.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Noah & Marcelo Performance Hub. <a href="./guia.html">Abrir guia de uso</a></p>
+    </footer>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="./assets/vendor/chart.umd.min.js"></script>
+    <script src="./assets/vendor/xlsx.full.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

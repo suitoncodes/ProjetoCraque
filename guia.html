@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guia de Uso | Noah & Marcelo Performance Hub</title>
+    <meta
+      name="description"
+      content="Guia simples para aprender a usar o app de acompanhamento esportivo de Noah e Marcelo."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-glow page-glow-left"></div>
+    <div class="page-glow page-glow-right"></div>
+
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">NM</span>
+        <span class="brand-copy">
+          <strong>Noah & Marcelo</strong>
+          <small>Guia de uso</small>
+        </span>
+      </a>
+
+      <nav class="topnav">
+        <a href="./index.html">Voltar ao painel</a>
+        <a href="#primeiros-passos">Primeiros passos</a>
+        <a href="#cadastro">Cadastro</a>
+        <a href="#backup">Backup</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+    </header>
+
+    <main class="guide-main">
+      <section class="panel guide-hero" id="top">
+        <div class="hero-copy">
+          <span class="eyebrow">Guia para leigo completo</span>
+          <h1>Como usar o app sem medo de errar.</h1>
+          <p>
+            Esta página foi feita para quem não mexe com planilha, banco de dados ou sistemas.
+            Você só precisa abrir o painel, preencher os dados da coleta e usar os botões certos
+            para guardar tudo com segurança.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./index.html">Abrir o painel</a>
+            <a class="button button-secondary" href="#primeiros-passos">Começar pelo básico</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="primeiros-passos">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Primeiros passos</span>
+            <h2>O que esse app faz</h2>
+          </div>
+          <p>
+            Pense nele como um caderno inteligente: você coloca as medidas e o site monta os
+            gráficos, o histórico e os comparativos sozinho.
+          </p>
+        </div>
+
+        <div class="guide-grid">
+          <article class="glass-card step-card">
+            <span class="step-number">1</span>
+            <h3>Ele guarda as coletas</h3>
+            <p>
+              Cada vez que você registra uma nova avaliação, o site salva a data, os tempos do
+              RAST, o salto, o peso, a altura e as observações.
+            </p>
+          </article>
+
+          <article class="glass-card step-card">
+            <span class="step-number">2</span>
+            <h3>Ele atualiza os gráficos</h3>
+            <p>
+              Depois de salvar, os gráficos e os cards mudam automaticamente para mostrar evolução,
+              queda, comparação e leitura do momento.
+            </p>
+          </article>
+
+          <article class="glass-card step-card">
+            <span class="step-number">3</span>
+            <h3>Ele não usa servidor</h3>
+            <p>
+              Os dados ficam no navegador. Por isso é importante exportar backup em JSON ou Excel
+              sempre que fizer mudanças importantes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="rotina">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Rotina ideal</span>
+            <h2>O jeito mais seguro de usar</h2>
+          </div>
+          <p>Se seguir essa ordem, fica bem difícil perder dado ou se enrolar.</p>
+        </div>
+
+        <div class="guide-flow">
+          <article class="glass-card flow-card">
+            <span class="flow-number">1</span>
+            <h3>Abra o painel</h3>
+            <p>Entre em <strong>index.html</strong> e confira se o atleta certo já aparece no histórico.</p>
+          </article>
+
+          <article class="glass-card flow-card">
+            <span class="flow-number">2</span>
+            <h3>Cadastre a coleta</h3>
+            <p>Preencha o formulário com os dados do dia e clique em <strong>Salvar coleta</strong>.</p>
+          </article>
+
+          <article class="glass-card flow-card">
+            <span class="flow-number">3</span>
+            <h3>Revise os gráficos</h3>
+            <p>Veja se os números subiram ou caíram e confira se as fotos do shape ficaram anexadas.</p>
+          </article>
+
+          <article class="glass-card flow-card">
+            <span class="flow-number">4</span>
+            <h3>Faça backup</h3>
+            <p>Ao terminar, exporte pelo menos o JSON. Assim você consegue recuperar tudo depois.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="cadastro">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Cadastro de coleta</span>
+            <h2>Como preencher cada campo</h2>
+          </div>
+          <p>
+            Se você souber preencher este bloco, o resto do app praticamente trabalha sozinho.
+          </p>
+        </div>
+
+        <div class="guide-grid">
+          <article class="glass-card step-card">
+            <h3>Atleta</h3>
+            <p>Escolha <strong>Noah</strong> ou <strong>Marcelo</strong>. Isso define em qual histórico a coleta entra.</p>
+          </article>
+
+          <article class="glass-card step-card">
+            <h3>Data</h3>
+            <p>Use a data real da avaliação. Isso é o que organiza a linha do tempo dos gráficos.</p>
+          </article>
+
+          <article class="glass-card step-card">
+            <h3>Idade, peso e altura</h3>
+            <p>Coloque exatamente como estava no dia do teste. O app usa isso para calcular indicadores.</p>
+          </article>
+
+          <article class="glass-card step-card">
+            <h3>SLJ</h3>
+            <p>Digite a melhor distância do salto horizontal em metros. Exemplo: <strong>1.54</strong>.</p>
+          </article>
+
+          <article class="glass-card step-card">
+            <h3>RAST</h3>
+            <p>Preencha os 6 tiros com os tempos em segundos. Exemplo: <strong>7.16</strong>, <strong>7.70</strong> e assim por diante.</p>
+          </article>
+
+          <article class="glass-card step-card">
+            <h3>Observações</h3>
+            <p>
+              Escreva algo útil do dia, como cansaço, dor, retorno de pausa, mudança de treino ou
+              qualquer detalhe que explique o resultado.
+            </p>
+          </article>
+        </div>
+
+        <div class="guide-callout">
+          <strong>Dica importante</strong>
+          <p>
+            Nos campos com número decimal, use ponto. Exemplo: <strong>1.54</strong> em vez de
+            <strong>1,54</strong>. Isso evita erro no cálculo.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Fotos do shape</span>
+            <h2>Como anexar as imagens do dia</h2>
+          </div>
+          <p>Essas fotos ficam ligadas à coleta específica, então cada dia pode ter seu próprio registro visual.</p>
+        </div>
+
+        <div class="guide-grid">
+          <article class="glass-card step-card">
+            <span class="step-number">1</span>
+            <h3>Escolha as fotos</h3>
+            <p>Clique no campo de fotos e selecione uma ou mais imagens do computador ou celular.</p>
+          </article>
+
+          <article class="glass-card step-card">
+            <span class="step-number">2</span>
+            <h3>Veja a prévia</h3>
+            <p>Antes de salvar, a prévia aparece na lateral. Isso serve para confirmar se as fotos certas foram escolhidas.</p>
+          </article>
+
+          <article class="glass-card step-card">
+            <span class="step-number">3</span>
+            <h3>Salve a coleta</h3>
+            <p>Depois de salvar, as fotos aparecem dentro do card daquele dia no histórico do atleta.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="backup">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Backup e segurança</span>
+            <h2>Como não perder os dados</h2>
+          </div>
+          <p>Essa é a parte mais importante para quem vai usar o app por meses.</p>
+        </div>
+
+        <div class="guide-grid">
+          <article class="glass-card step-card">
+            <h3>Exportar JSON</h3>
+            <p>
+              É o backup principal. Guarde esse arquivo numa pasta segura, nuvem ou WhatsApp para você mesmo.
+            </p>
+          </article>
+
+          <article class="glass-card step-card">
+            <h3>Exportar Excel</h3>
+            <p>
+              Serve para ter os dados em planilha e consultar fora do app. Bom para mandar para outra pessoa.
+            </p>
+          </article>
+
+          <article class="glass-card step-card">
+            <h3>Importar backup</h3>
+            <p>
+              Se trocar de navegador, computador ou perder os dados, clique em <strong>Importar backup</strong> e selecione o JSON salvo.
+            </p>
+          </article>
+        </div>
+
+        <div class="guide-callout">
+          <strong>Regra simples</strong>
+          <p>
+            Fez uma coleta nova? Exporte um JSON novo no mesmo dia. Esse é o hábito que mais evita dor de cabeça.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Relatório rápido</span>
+            <h2>Como gerar algo para mostrar ou imprimir</h2>
+          </div>
+          <p>O próprio app já deixa isso bem mastigado.</p>
+        </div>
+
+        <div class="guide-grid">
+          <article class="glass-card step-card">
+            <h3>PDF do atleta</h3>
+            <p>Entre no perfil individual e clique em <strong>Imprimir PDF</strong>. O navegador abre a tela de impressão.</p>
+          </article>
+
+          <article class="glass-card step-card">
+            <h3>O que sai no PDF</h3>
+            <p>Cards, gráfico, diagnóstico resumido, histórico e indicadores principais do atleta selecionado.</p>
+          </article>
+
+          <article class="glass-card step-card">
+            <h3>Comparar rápido</h3>
+            <p>Na página inicial, a área de comparativo mostra quem está melhor em cada indicador mais importante.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="duvidas">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Dúvidas comuns</span>
+            <h2>Perguntas que um leigo normalmente faz</h2>
+          </div>
+          <p>Se acontecer alguma dessas situações, a solução costuma ser simples.</p>
+        </div>
+
+        <div class="faq-grid">
+          <article class="glass-card faq-card">
+            <h3>Os dados sumiram. E agora?</h3>
+            <p>
+              Tente abrir no mesmo navegador em que você cadastrou. Se não voltar, use
+              <strong>Importar backup</strong> e selecione o JSON que você exportou antes.
+            </p>
+          </article>
+
+          <article class="glass-card faq-card">
+            <h3>Posso usar em outro computador?</h3>
+            <p>
+              Pode. Mas os dados não vão junto sozinhos. Você precisa levar o arquivo de backup JSON
+              e importar no outro computador.
+            </p>
+          </article>
+
+          <article class="glass-card faq-card">
+            <h3>Errei uma coleta. Tem como apagar?</h3>
+            <p>
+              Tem. No histórico do atleta, cada card de avaliação tem o botão
+              <strong>Remover coleta</strong>.
+            </p>
+          </article>
+
+          <article class="glass-card faq-card">
+            <h3>Posso zerar tudo?</h3>
+            <p>
+              Sim. Existe o botão <strong>Restaurar dados iniciais</strong>. Use isso só se você
+              tiver backup, porque apaga o que foi salvo nesse navegador.
+            </p>
+          </article>
+
+          <article class="glass-card faq-card">
+            <h3>Preciso preencher tudo sempre?</h3>
+            <p>
+              Para a coleta funcionar direito, sim. O app depende desses campos para calcular os
+              gráficos e indicadores automaticamente.
+            </p>
+          </article>
+
+          <article class="glass-card faq-card">
+            <h3>Qual backup eu devo confiar mais?</h3>
+            <p>
+              O principal é o <strong>JSON</strong>. O Excel é ótimo para leitura, mas o JSON é o
+              que reconstrói o app.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Resumo final</span>
+            <h2>Se quiser memorizar só o essencial</h2>
+          </div>
+          <p>Essa é a versão curta para não esquecer.</p>
+        </div>
+
+        <div class="guide-callout">
+          <strong>Passo a passo em uma linha</strong>
+          <ul class="guide-list">
+            <li>Abra o painel.</li>
+            <li>Cadastre a coleta do atleta.</li>
+            <li>Confira os gráficos e o histórico.</li>
+            <li>Exporte um JSON de backup.</li>
+            <li>Quando quiser, gere PDF pelo perfil individual.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p><a href="./index.html">Voltar ao painel principal</a></p>
+    </footer>
+  </body>
+</html>
