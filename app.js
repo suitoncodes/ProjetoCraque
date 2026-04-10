@@ -965,6 +965,7 @@ function bindSmoothAnchors() {
 }
 
 function smoothScrollToElement(target) {
+  target.classList.add("is-visible");
   const startY = window.scrollY;
   const topbar = document.querySelector(".topbar");
   const offset = (topbar?.offsetHeight || 0) + 18;
@@ -1586,7 +1587,7 @@ function setupRevealObserver() {
         }
       });
     },
-    { threshold: 0.16 }
+    { threshold: 0.04, rootMargin: "0px 0px -8% 0px" }
   );
 
   items.forEach((item) => observer.observe(item));
